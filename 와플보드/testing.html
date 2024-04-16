@@ -1,0 +1,411 @@
+<div class="header-wrap desktop-header">
+  <!--  Logo Type -->
+  <div class="page-control">
+    <a href="/public">
+      <img class="logo-type" src="{{setting.logoImgUrl}}">
+    </a>
+    <div>
+      <div id="loginStatus">
+        <a class="btn-nomal" href="/user/myPoints">POINT</a>
+        <a class="btn-nomal" href="/user/myPosts">내 게시글</a>
+        <a class="btn-nomal" href="/user/myInfo">마이 페이지</a>
+        <a class="logout btn-logout" href="/logout">로그아웃</a>
+        <a class="btn-posting" href="/post/write?category=2">글 쓰기</a>
+      </div>
+      <div id="logoutStatus">
+        <a class="btn-login" href="/login">로그인</a>
+        <a class="btn-join" href="/join">회원가입</a>
+      </div>
+    </div>
+  </div>
+  <!-- Tab -->
+  <div style="display: flex;justify-content: space-between; width: 100%;">
+    <div class="tab">
+      <!-- 탭 -->
+      <a class="tab-item" href="{{categories.0.url}}">
+        {{ categories.0.name }}
+      </a>
+      <a class="tab-item" href="{{categories.1.url}}">
+        {{ categories.1.name }}
+      </a>
+      <a class="tab-item" href="{{categories.2.url}}">
+        {{ categories.2.name }}
+      </a>
+    </div>
+    <div style="position: relative;">
+      <button id="menuButton">
+        <span class="material-symbols-rounded">menu</span>
+      </button>
+      <div class="menuList mobile-menu-list-surface" style="display: none;">
+        <div class="mobile-close-menu-button">
+          <button id="closeMenu">
+            <span class="material-symbols-rounded">close</span>
+          </button>
+        </div>
+        <div class="mobile-menu-list-layout">
+          <a class="mobile-menu-item-button">
+            <span class="material-symbols-rounded">menu_book</span>
+            <p>서비스 소개</p>
+          </a>
+          <a class="mobile-menu-item-button">
+            <span class="material-symbols-rounded">tooltip</span>
+            <p>스토리</p>
+          </a>
+          <a class="mobile-menu-item-button" href="/pages/intro">
+            <span class="material-symbols-rounded">navigation</span>
+            <p>취업 스킬</p>
+          </a>
+          <a class="mobile-menu-item-button" href="/posts/ga-pick">
+            <span class="material-symbols-rounded">verified</span>
+            <p>지애 픽</p>
+          </a>
+          <a class="mobile-menu-item-button" href="/user/myPosts">
+            <span class="material-symbols-rounded">account_circle</span>
+            <p>마이페이지</p>
+          </a>
+          <a class="mobile-menu-item-button" href="/mySavedPosts">
+            <span class="material-symbols-rounded">book_2</span>
+            <p>공지사항</p>
+          </a>
+          <a class="mobile-menu-item-button" href="/posts/event">
+            <span class="material-symbols-rounded">calendar_today</span>
+            <p>이벤트</p>
+          </a>
+          <a class="mobile-menu-item-button" href="voc">
+            <span class="material-symbols-rounded">help</span>
+            <p>고객센터</p>
+          </a>
+          <a class="mobile-menu-item-button" href="/about">
+            <span class="material-symbols-rounded">developer_guide</span>
+            <p>이용 약관</p>
+          </a>
+          <a class="mobile-menu-item-button" href="/about">
+            <span class="material-symbols-rounded">admin_panel_settings</span>
+            <p>개인정보 처리방침</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 모바일 헤더 -->
+<div class="mobile-header">
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <a href="/public">
+      <img src="{{setting.logoImgUrl}}" width="200px">
+    </a>
+    <div id="loginMobileStatus">
+      <a class="btn-posting" href="/post/write?category=2">글 쓰기</a>
+    </div>
+    <div id="logoutMobileStatus">
+      <a class="btn-login" href="/login">로그인</a>
+    </div>
+  </div>
+  <div style="display: flex;  justify-content: space-between;  align-items: center; padding-top: 12px;">
+    <div class="tab">
+      <!-- 탭 -->
+      <a class="tab-item" href="{{categories.0.url}}">
+        {{ categories.0.name }}
+      </a>
+      <a class="tab-item" href="{{categories.1.url}}">
+        {{ categories.1.name }}
+      </a>
+      <a class="tab-item" href="{{categories.2.url}}">
+        {{ categories.2.name }}
+      </a>
+    </div>
+    <div style="position: relative;">
+      <button id="mobileMenuButton">
+        <span class="material-symbols-rounded">menu</span>
+      </button>
+      <div class="mobileMenuList mobile-menu-list-surface" style="display: none;">
+        <div class="mobile-close-menu-button">
+          <button id="closeMobileMenu">
+            <span class="material-symbols-rounded">close</span>
+          </button>
+        </div>
+        <div class="mobile-menu-list-layout">
+          <a id="mobileMenuLogin" class="btn-logout mobile-button-center" href="login">로그인</a>
+          <a id="mobileMenuJoin" class="btn-posting mobile-button-center" href="join">회원가입</a>
+          <a class="mobile-menu-item-button">
+            <span class="material-symbols-rounded">menu_book</span>
+            <p>서비스 소개</p>
+          </a>
+          <a class="mobile-menu-item-button">
+            <span class="material-symbols-rounded">tooltip</span>
+            <p>스토리</p>
+          </a>
+          <a class="mobile-menu-item-button" href="/pages/intro">
+            <span class="material-symbols-rounded">navigation</span>
+            <p>취업 스킬</p>
+          </a>
+          <a class="mobile-menu-item-button" href="/posts/ga-pick">
+            <span class="material-symbols-rounded">verified</span>
+            <p>지애 픽</p>
+          </a>
+          <a class="mobile-menu-item-button" href="/user/myPosts">
+            <span class="material-symbols-rounded">account_circle</span>
+            <p>마이페이지</p>
+          </a>
+          <a class="mobile-menu-item-button" href="/mySavedPosts">
+            <span class="material-symbols-rounded">book_2</span>
+            <p>공지사항</p>
+          </a>
+          <a class="mobile-menu-item-button" href="/posts/event">
+            <span class="material-symbols-rounded">calendar_today</span>
+            <p>이벤트</p>
+          </a>
+          <a class="mobile-menu-item-button" href="voc">
+            <span class="material-symbols-rounded">help</span>
+            <p>고객센터</p>
+          </a>
+          <a class="mobile-menu-item-button" href="/about">
+            <span class="material-symbols-rounded">developer_guide</span>
+            <p>이용 약관</p>
+          </a>
+          <a class="mobile-menu-item-button" href="/about">
+            <span class="material-symbols-rounded">admin_panel_settings</span>
+            <p>개인정보 처리방침</p>
+          </a>
+          <a id="mobileMenuLogout" class="mobile-menu-item-button" href="/logout">
+            <span class="material-symbols-rounded">logout</span>
+            <p>로그아웃</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const loginStatusSection = document.getElementById('loginStatus');
+  const logoutStatusSection = document.getElementById('logoutStatus');
+  const loginStatusMobileSection = document.getElementById('loginMobileStatus');
+  const logoutStatusMobileSection = document.getElementById('logoutMobileStatus');
+
+  if (loginStatusSection && logoutStatusSection) {
+    if (`{{user.name}}`) {
+      loginStatusSection.style.display = 'flex';
+      logoutStatusSection.style.display = 'none';
+      loginStatusMobileSection.style.display = 'flex';
+      logoutStatusMobileSection.style.display = 'none';
+    } else {
+      loginStatusSection.style.display = 'none';
+      logoutStatusSection.style.display = 'flex';
+      loginStatusMobileSection.style.display = 'none';
+      logoutStatusMobileSection.style.display = 'flex';
+    }
+  }
+
+  //  모바일 메뉴
+  document.addEventListener('DOMContentLoaded', function () {
+    const mobileMenuButton = document.getElementById('mobileMenuButton');
+    const mobileMenuList = document.querySelector('.mobileMenuList');
+    const closeMobileMenu = document.getElementById('closeMobileMenu');
+
+    // 모바일 메뉴 클릭
+    mobileMenuButton.addEventListener('click', function () {
+      console.log(mobileMenuList.style.display);
+      mobileMenuList.style.display = mobileMenuList.style.display === 'none' ? 'flex' : 'none';
+      if (`{{user.name}}`) {
+        const mobileMenuLogin = document.getElementById('mobileMenuLogin');
+        const mobileMenuJoin = document.getElementById('mobileMenuJoin');
+        const mobileMenuLogout = document.getElementById('mobileMenuLogout');
+        mobileMenuLogin.style.display = 'none';  // 로그인 된 유저는 회원가입+로그인 숨김
+        mobileMenuJoin.style.display = 'none';
+        mobileMenuLogout.style.display = 'flex';
+      } else {
+        mobileMenuLogin.style.display = 'flex';
+        mobileMenuJoin.style.display = 'flex';
+        mobileMenuLogout.style.display = 'none';
+      }
+    });
+
+    // 모바일 메뉴 닫기 클릭
+    closeMobileMenu.addEventListener('click', function () {
+      mobileMenuList.style.display = mobileMenuList.style.display === 'none' ? 'flex' : 'none';
+    })
+
+    // 모바일 메뉴 닫기 클릭 2 - 문서 전체 범위
+    document.addEventListener('click', function (e) {
+      if (mobileMenuList.contains(e.target) || mobileMenuButton.contains(e.target)) {
+        return;
+      }
+      mobileMenuList.style.display = 'none';
+    });
+  });
+</script>
+
+<style>
+  .mobile-button-center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-header {
+    padding: 20px;
+  }
+
+  .mobile-menu-list-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    margin-top: 32px;
+  }
+
+  .mobile-menu-item-button {
+    display: flex;
+    gap: 12px;
+    font-size: 1.2rem;
+    align-items: center;
+    padding: 0.625rem 0;
+    border-bottom: 1px solid #e2e2e2;
+  }
+
+  .mobile-menu-list-surface {
+    position: fixed;
+    width: 80%;
+    height: 100%;
+    background: white;
+    border: 1px solid #fff;
+    top: 0;
+    right: 0;
+    box-shadow: -2px 0px 10px #00000016;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .mobile-menu-list-surface .mobile-close-menu-button {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .btn-posting {
+    padding: 6px 16px;
+    border-radius: 12px;
+    background: #FD384E;
+    color: #fff !important;
+    display: flex;
+    align-items: center;
+  }
+
+  .btn-login {
+    color: #999;
+  }
+
+  .btn-nomal {
+    color: #999;
+  }
+
+  .btn-join {
+    height: 48px;
+    padding: 10px 16px;
+    border-radius: 24px;
+    background: #FD384E;
+    color: #fff !important;
+    display: flex;
+    align-items: center;
+  }
+
+  .btn-logout {
+    padding: 6px 16px;
+    border-radius: 12px;
+    background-color: #4C4C4C;
+    color: #fff !important;
+    display: flex;
+    align-items: center;
+  }
+
+  .header-wrap {
+    position: relative;
+    width: 1250px;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin: 0 auto;
+    padding: 1rem 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .header-wrap .page-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  #loginStatus,
+  #logoutStatus {
+    gap: 1rem;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  #loginStatus > button,
+  #loginStatus > button {
+    width: auto !important;
+  }
+
+  #loginStatus {
+    gap: 1rem;
+    justify-content: flex-end;
+    width: auto !important;
+  }
+
+  .logo-type {
+    width: 300px;
+  }
+
+  .tab {
+    display: flex;
+    padding-top: 1rem;
+    gap: 8px;
+  }
+
+  .tab-item,
+  .tab-item-nomal {
+    font-size: 21px;
+    color: rgba(0, 0, 0, 0.5) !important;
+    font-weight: bold;
+
+    padding: 6px 6px 2px;
+    border-bottom: 2px solid #fff;
+    cursor: pointer;
+  }
+
+  .tab-item:hover {
+    color: #FD384E !important;
+    border-bottom: 2px solid #FD384E;
+  }
+
+  .tab-item-nomal:hover {
+    color: #FD384E !important;
+    border-bottom: 2px solid #fff;
+  }
+
+  .mobile-header {
+    display: none;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    flex-direction: column;
+    box-shadow: 0px 1px 10px #00000012;
+  }
+
+  @media screen and (max-width: 1250px) {
+    .mobile-header {
+      display: flex;
+    }
+
+    .desktop-header {
+      display: none;
+    }
+
+    .tab {
+      padding-top: 0;
+    }
+  }
+</style>

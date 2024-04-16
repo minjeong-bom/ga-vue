@@ -219,14 +219,15 @@ export default defineComponent({
           }
 
           this.isLoading = false;
+
         } catch (e) {
           // item.nickname = '비공개 회원';
           // item.badgeTitle = ''; // 삭제된 회원
           this.isLoading = false;
         }
+
       }
       this.articleList = array;
-      console.log(this.articleList)
     },
     async getThumbnail() {
       const config = {
